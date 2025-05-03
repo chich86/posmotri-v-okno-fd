@@ -53,6 +53,7 @@ ol {
 .page {
   display: flex;
   align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -87,14 +88,12 @@ ol {
   flex-direction: row;
   min-width: 711px;
   justify-content: space-between;
+  align-items: end;
 }
 
 .search-form__submit-button {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  width: 194px;
+  height: 34px;
 }
 
 .content__list-container {
@@ -134,6 +133,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-right: 7px;
+  padding-left: 2px;
 }
 
 .content__video-card {
@@ -214,11 +215,23 @@ fieldset {
   display: flex;
   flex-direction: row;
   width: fit-content;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-  
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: #fff solid 1px;
+  outline-offset: 1px;
+}
+
+.search-form__label:active {
+  outline: #fff solid 1px;
+  outline-offset: -1px;
 }
 
 .search-form__textfield { /* Вернуться к факультативным шагам по инпутам и чекбоксам */
@@ -232,6 +245,10 @@ fieldset {
   border-right: none;
   appearance: none;
   min-width: 225px;
+}
+
+.search-form__textfield::placeholder {
+  color: #bababa
 }
 
 .search-form__pseudo-checkbox {
@@ -251,3 +268,44 @@ fieldset {
   height: 15px;
   background-color: #fff;
 }
+
+.button {
+  background-color: transparent;
+  border: #fff solid 1px; 
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.more-button {
+  padding: 7px 140px;
+  width: 100%;
+}
+
+.search-form__pseudo-checkbox:has(:focus-visible) {
+  outline: #fff solid 1px;
+  outline-offset: 1px;  
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: #fff solid 1px;
+  outline-offset: 1px;
+}
+
