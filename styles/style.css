@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -48,16 +51,6 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
-}
-
-.page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
 }
 
 .content {
@@ -163,6 +156,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
+  padding-bottom: 8px;
 }
 
 .content__card-link {
@@ -209,6 +203,7 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  padding-bottom: 4px;
 }
 
 fieldset {
@@ -219,7 +214,6 @@ fieldset {
   display: flex;
   flex-direction: row;
   width: fit-content;
-  gap: 5px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -244,8 +238,9 @@ fieldset {
   text-underline-offset: 1px;
 }
 
-.search-form__textfield { /* Вернуться к факультативным шагам по инпутам и чекбоксам */
-  font-family: 'Fira Sans Condensed', sans-serif;
+.search-form__textfield {
+  /* Вернуться к факультативным шагам по инпутам и чекбоксам */
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
@@ -285,7 +280,7 @@ fieldset {
 
 .button {
   background-color: transparent;
-  border: #fff solid 1px; 
+  border: #fff solid 1px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
@@ -303,7 +298,7 @@ fieldset {
 
 .search-form__pseudo-checkbox:has(:focus-visible) {
   outline: #fff solid 1px;
-  outline-offset: 1px;  
+  outline-offset: 1px;
 }
 
 .button:hover {
